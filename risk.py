@@ -1,10 +1,19 @@
 import sqlite3
+import os
+from dotenv import load_dotenv
+from google import genai
+
+# Load the secret key from the .env file
+load_dotenv()
 
 DB_NAME = "mags_trading.db"
 
+# Initialize the Gemini client securely
+client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
+
 
 def analyze_spoofing_risk():
-    """Fetches recent trades and sends them to an LLM to detect market manipulation."""
+    """Fetches recent trades and sends them to Gemini to detect market manipulation."""
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
 
@@ -34,8 +43,14 @@ def analyze_spoofing_risk():
     Provide a brief, 2-3 sentence risk assessment.
     """
 
+    # Calling the live Gemini model
+    response = client.models.generate_content(
+        model='gemini-3.6-flash',
+        contents=prompt
+    )
+
     return {
-        "status": "mock_success",
-        "analysis": "No immediate wash trading detected. Volume is evenly distributed across multiple distinct maker and taker IDs. Market state appears healthy.",
-        "prompt_preview": prompt
+        "status": "success",
+        "analysis": response.text,
+        #"prompt_preview": prompt
     }

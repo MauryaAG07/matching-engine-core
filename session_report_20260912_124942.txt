@@ -1,0 +1,19 @@
+========================================
+MaGs Trading Engine - Session Tear Sheet
+========================================
+Generated: 2026-09-12 12:49:42
+
+--- SESSION METRICS ---
+Total Trades Executed : 3
+Total Volume (Shares) : 15
+Total Traded Value    : $181,250.00
+Session VWAP          : $12,083.33
+
+--- AI COMPLIANCE & RISK ASSESSMENT ---
+**Risk Assessment:**
+
+Based on the provided trade logs, there is no immediate indication of wash trading or volume micro-bursts, as all maker and taker account IDs are unique and the execution timestamps are widely spaced across several hours. However, while the risk of active high-frequency manipulation appears low, the static trade quantities (5 units) alongside extreme price variance (1,250 to 20,000) warrant further investigation into order book liquidity and pricing integrity for this asset.
+
+========================================
+End of Report
+========================================
