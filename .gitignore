@@ -1,1 +1,5 @@
 .env
+*.db
+__pycache__/
+.idea/
+session_report_*.txt
