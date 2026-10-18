@@ -3,3 +3,4 @@
 __pycache__/
 .idea/
 session_report_*.txt
+.DS_Store
