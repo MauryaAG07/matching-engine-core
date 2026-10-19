@@ -1,7 +1,7 @@
 import sqlite3
 from datetime import datetime, timedelta
 
-DB_NAME = "mags_trading.db"
+DB_NAME = "FastAPI trading.db"
 
 
 def calculate_vwap():
