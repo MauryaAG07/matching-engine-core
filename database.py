@@ -1,6 +1,6 @@
 import sqlite3
 
-DB_NAME = "mags_trading.db"
+DB_NAME = "FastAPI trading.db"
 
 
 def init_db():
