@@ -23,7 +23,7 @@ async def lifespan(app: FastAPI):
     # Clean shutdown
     scheduler.shutdown()
 
-app = FastAPI(title="MaGs Trading Engine", lifespan=lifespan)
+app = FastAPI(title="FastAPI Trading Engine", lifespan=lifespan)
 book = OrderBook()
 
 class OrderRequest(BaseModel):
