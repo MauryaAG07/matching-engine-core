@@ -6,7 +6,7 @@ from google import genai
 # Load the secret key from the .env file
 load_dotenv()
 
-DB_NAME = "FastAPI Trading.db"
+DB_NAME = "FastAPI trading.db"
 
 # Initialize the Gemini client securely
 client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
