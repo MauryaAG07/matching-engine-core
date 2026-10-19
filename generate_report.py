@@ -2,7 +2,7 @@ import sqlite3
 from datetime import datetime
 from risk import analyze_spoofing_risk
 
-DB_NAME = "mags_trading.db"
+from database import DB_NAME
 
 
 def generate_tear_sheet():
