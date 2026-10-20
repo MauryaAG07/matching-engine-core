@@ -43,14 +43,20 @@ def analyze_spoofing_risk():
     Provide a brief, 2-3 sentence risk assessment.
     """
 
-    # Calling the live Gemini model
-    response = client.models.generate_content(
-        model='gemini-3.6-flash',
-        contents=prompt
-    )
+    try:
+        # Update to a valid model name
+        response = client.models.generate_content(
+            model='gemini-2.0-flash', 
+            contents=prompt
+        )
 
-    return {
-        "status": "success",
-        "analysis": response.text,
-        #"prompt_preview": prompt
-    }
+        return {
+            "status": "success",
+            "analysis": response.text,
+        }
+    except Exception as e:
+        # Catch errors so FastAPI returns a graceful JSON response instead of a 500 crash
+        return {
+            "status": "error",
+            "analysis": f"Failed to generate risk analysis: {str(e)}"
+        }
