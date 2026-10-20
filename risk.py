@@ -46,7 +46,7 @@ def analyze_spoofing_risk():
     try:
         # Update to a valid model name
         response = client.models.generate_content(
-            model='gemini-2.0-flash', 
+            model='gemini-3.8-flash', 
             contents=prompt
         )
 
