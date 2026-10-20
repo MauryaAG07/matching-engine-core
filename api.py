@@ -63,6 +63,6 @@ async def get_book():
         "best_ask": book.best_ask
     }
 @app.get("/risk")
-async def get_risk_analysis():
+def get_risk_analysis(): # Removed 'async'
     """Generates an LLM-powered market manipulation report."""
     return analyze_spoofing_risk()
