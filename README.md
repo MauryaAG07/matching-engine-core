@@ -8,7 +8,7 @@ A low-latency limit order book (LOB) and matching engine featuring O(1) executio
 * **API Layer:** FastAPI for low-latency HTTP order ingestion and book retrieval.
 * **Data Persistence:** Asynchronous SQLite database for trade logging.
 * **Background Workers:** Isolated cron scheduler for non-blocking real-time VWAP calculations.
-* **Risk & Compliance:** Live API integration with Google's gemini-3.6-flash for quantitative spoofing and wash-trading detection.
+* **Risk & Compliance:** Live API integration with Google's gemini-3.8-flash for quantitative spoofing and wash-trading detection.
 * **Reporting:** Automated session tear sheet generation summarizing trade volume, VWAP, and AI risk assessments.
 
 ## Quick Start Guide
